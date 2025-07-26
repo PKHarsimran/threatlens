@@ -3,7 +3,6 @@ import './App.css'
 
 function App() {
   const base = import.meta.env.BASE_URL
-
   const [feed, setFeed] = useState([])
   const [stats, setStats] = useState(null)
   const [lastUpdated, setLastUpdated] = useState(null)
@@ -31,7 +30,6 @@ function App() {
       .catch(err => console.error('Failed to load status', err))
   }, [base])
 
-
   return (
     <div className="container">
       <h1>ThreatLens Feed</h1>
@@ -49,7 +47,6 @@ function App() {
       {feed.length === 0 ? (
         <p>Loading feed...</p>
       ) : (
-
       <table>
         <thead>
           <tr>
@@ -69,7 +66,6 @@ function App() {
         </tbody>
       </table>
       )}
-
     </div>
   )
 }
