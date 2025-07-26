@@ -5,10 +5,16 @@
     <link rel="icon" href="/threatlens/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThreatLens - Live Threat Intelligence</title>
+
+    <!-- 🚀 Redirect if accessed via /frontend/ directly -->
+    <script>
+      if (location.pathname.startsWith('/threatlens/frontend')) {
+        location.replace('/threatlens/');
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <!-- ✅ Let Vite handle this at build time -->
     <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
