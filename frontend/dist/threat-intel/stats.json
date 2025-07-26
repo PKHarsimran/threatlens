@@ -1,0 +1,11 @@
+{
+  "duration_s": 6.3,
+  "counts": {
+    "IPv4": 4,
+    "CVE": 21,
+    "Domain": 30,
+    "Filename": 4,
+    "SHA256": 1,
+    "URL": 1
+  }
+}
