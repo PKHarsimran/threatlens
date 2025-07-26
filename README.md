@@ -29,6 +29,17 @@ Before each build, the `threat-intel` directory at the repository root is copied
 
 When running `npm run dev --prefix frontend`, the copy step runs automatically via the predev script.
 
+## Testing
+
+At the moment there are no automated tests. The `npm test` command simply
+prints a placeholder message. Run it with:
+
+```bash
+npm test --prefix frontend
+```
+
+This allows the CI workflow to report success until real tests are added.
+
 ## Deployment
 
 Pushing to the `main` branch triggers the GitHub Actions workflow in `.github/workflows/deploy.yml`. The workflow builds the frontend and deploys the `frontend/dist` directory to GitHub Pages.
