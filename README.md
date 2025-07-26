@@ -11,6 +11,13 @@ npm ci --prefix frontend
 npm run dev --prefix frontend
 ```
 
+Preview the production build locally:
+
+```bash
+npm run build --prefix frontend
+npm run preview --prefix frontend
+```
+
 Lint and build the project:
 
 ```bash
