@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const base = import.meta.env.BASE_URL
+
   const [feed, setFeed] = useState([])
   const [stats, setStats] = useState(null)
   const [lastUpdated, setLastUpdated] = useState(null)
@@ -20,17 +21,16 @@ function App() {
         setFeed(data)
       })
       .catch(err => console.error('Failed to load feed', err))
-
     fetch(`${base}threat-intel/stats.json`)
       .then(res => res.json())
       .then(setStats)
       .catch(err => console.error('Failed to load stats', err))
-
     fetch(`${base}threat-intel/feed_status.json`)
       .then(res => res.json())
       .then(data => setLastUpdated(data.last_updated))
       .catch(err => console.error('Failed to load status', err))
   }, [base])
+
 
   return (
     <div className="container">
@@ -49,6 +49,7 @@ function App() {
       {feed.length === 0 ? (
         <p>Loading feed...</p>
       ) : (
+
       <table>
         <thead>
           <tr>
@@ -68,6 +69,7 @@ function App() {
         </tbody>
       </table>
       )}
+
     </div>
   )
 }
