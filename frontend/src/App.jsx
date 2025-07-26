@@ -20,12 +20,10 @@ function App() {
         setFeed(data)
       })
       .catch(err => console.error('Failed to load feed', err))
-
     fetch(`${base}threat-intel/stats.json`)
       .then(res => res.json())
       .then(setStats)
       .catch(err => console.error('Failed to load stats', err))
-
     fetch(`${base}threat-intel/feed_status.json`)
       .then(res => res.json())
       .then(data => setLastUpdated(data.last_updated))
